@@ -3,13 +3,12 @@ import requests
 from configparser import ConfigParser
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # For flashing messages (optional)
+app.secret_key = 'your_secret_key'
 
-# Extracting key from the online API to obtain weather updates
 config_file = "config.ini"
 config = ConfigParser()
 config.read(config_file)
-api_key = "3c91f2ad78ccc17451c13dd68f107148"  # Replace this with your own API key
+api_key = "cd88defdadc4239d6d8d893b04c99b08"  
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
 
 def get_weather(city):
